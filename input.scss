@@ -1,0 +1,136 @@
+$nav-height: 50px;
+$nav-border-size: 2px;
+$light-blue: #2196f3;
+$dark-blue: #0b1d2a;
+$dark-blue-transparent: rgba(11, 29, 42, 1);
+
+html, body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+nav {
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 100;
+}
+
+ul {
+  background: $light-blue;
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  height: $nav-height;
+
+  li {
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    letter-spacing: 1px;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    float: left;
+    padding: 12px 0 0 0;
+    transition: all .2s; 
+
+    &:hover{
+      border-top: $nav-border-size solid white;
+      text-decoration:none;
+      color: white;
+    }
+  }
+}
+
+a.dropdown-toggle{
+	color: white;
+}
+
+.dropdown-item{
+	color: white;
+  display: inline;
+	&:hover{
+		background-color: $light-blue;
+		color: white;
+	}
+}
+.dropdown-menu{
+  width:100%;
+  text-align: center;
+	color: white;
+	background-color: $light-blue;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-radius:0px;
+  transform: translate3d(0px, $nav-height - $nav-border-size, 0px) !important;
+  padding: 0;
+}
+
+:target::before {
+  $height: $nav-height + 10px;
+  content: "";
+  display: block;
+  height: $height;
+  margin: (-$height) 0 0; /* negative fixed header height */
+}
+
+.header {
+  letter-spacing: -15px;
+  font-family: Open Sans;
+  color: white;
+  text-align: center;
+  font-size: 200px;
+  font-weight: 800;
+  line-height: 200px;
+}
+
+.subheader{
+  color: rgba(255,255,255,0.6);
+  font-size: 50px;
+}
+
+.MainContainer {
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.ContentContainer {
+  position: relative;
+  display: block;
+  background-color: white;
+  z-index: 1;
+}
+
+.Content {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 75px 0;
+}
+
+.ParallaxContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  position: relative;
+  z-index: -1;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  transform: translateZ(-1px) scale(2);
+  background-color: $dark-blue;
+}
+
+.github-logo{
+	width: 25px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800');
