@@ -127,4 +127,16 @@ a.dropdown-toggle {
   width: 25px;
 }
 
+.card {
+  border: none;
+}
+
+.card-img-top {
+  border-radius: 0;
+}
+
+.card-body {
+  text-align: center;
+}
+
 /*# sourceMappingURL=style.css.map */
